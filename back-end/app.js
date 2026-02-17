@@ -57,6 +57,21 @@ app.get('/messages/:messageId', async (req, res) => {
     })
   }
 })
+
+// JSON For About Us
+app.get('/about', (req, res) => {
+  res.json({
+    title: "About Me",
+    paragraphs: [
+      "My name is Arnav Arora, and I am a Game Design and Computer Science student at NYU.",
+      "I enjoy building video games through tools like Unity or Unreal Engine. I also enjoy painting.",
+      "This project is part of a MERN stack assignment."
+    ],
+    imageUrl: "https://i.imgur.com/JEJdKmT.png"
+  })
+})
+
+
 // a route to handle logging out users
 app.post('/messages/save', async (req, res) => {
   // try to save the message to the database
